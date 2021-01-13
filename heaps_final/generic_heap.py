@@ -12,7 +12,7 @@ class Heap:
         self.length += 1  # increase length (b/c we're inserting)
         self._sift_up(self.length)  # take the freshly appended element and find its correct position in tree
 
-    def delete(self):
+    def delete_priority(self):
         return_val = self.heap[1]  # copy the priority_element
         self.heap[1] = self.heap[self.length]  # assign root to last element
         self.length -= 1  # reduce length (b/c we're deleting)

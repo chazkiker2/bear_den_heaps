@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
-# from heaps_final.generic_heap import Heap  # test final answer file
-from generic_heap import Heap  # test starter file
+from heaps_final.generic_heap import Heap  # test final answer file
+# from generic_heap import Heap  # test starter file
 
 
 class HeapTests(unittest.TestCase):
@@ -41,15 +41,15 @@ class HeapTests(unittest.TestCase):
         self.heap.insert(9)
         self.heap.insert(9)
         self.heap.insert(5)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 9)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 9)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 9)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 8)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 6)
 
     def test_default_delete_elements_in_order(self):
@@ -65,7 +65,7 @@ class HeapTests(unittest.TestCase):
         descending_order = []
 
         while self.heap.get_size() > 0:
-            descending_order.append(self.heap.delete())
+            descending_order.append(self.heap.delete_priority())
 
         self.assertEqual(descending_order, [10, 8, 7, 6, 5, 5, 2, 1])
 
@@ -108,15 +108,15 @@ class HeapTests(unittest.TestCase):
         self.heap.insert(9)
         self.heap.insert(9)
         self.heap.insert(5)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 5)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 6)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 8)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 9)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertEqual(self.heap.get_priority(), 9)
 
     def test_custom_delete_elements_in_order(self):
@@ -134,7 +134,7 @@ class HeapTests(unittest.TestCase):
         ascending_order = []
 
         while self.heap.get_size() > 0:
-            ascending_order.append(self.heap.delete())
+            ascending_order.append(self.heap.delete_priority())
 
         self.assertEqual(ascending_order, [1, 2, 5, 5, 6, 7, 8, 10])
 
@@ -150,7 +150,7 @@ class HeapTests(unittest.TestCase):
         self.heap._sift_down = MagicMock()
         self.heap.insert(10)
         self.heap.insert(11)
-        self.heap.delete()
+        self.heap.delete_priority()
         self.assertTrue(self.heap._sift_down.called)
 
 
