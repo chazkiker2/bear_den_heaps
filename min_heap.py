@@ -51,7 +51,7 @@ class MinHeap:
         pass
 
     # delete the smallest node, then re-balance the tree
-    def del_min(self):
+    def delete_min(self):
         pass
 
     # given a list, build a new storage accordingly

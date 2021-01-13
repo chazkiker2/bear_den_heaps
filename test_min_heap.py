@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
-# from min_heap import MinHeap  # starter storage
-from heaps_final.min_heap import MinHeap  # solution storage
+from min_heap import MinHeap  # starter Heap
+# from heaps_final.min_heap import MinHeap  # solution Heap
 
 
 class MyTestCase(unittest.TestCase):

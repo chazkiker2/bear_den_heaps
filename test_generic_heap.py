@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
-from heaps_final.generic_heap import Heap  # test final answer file
-# from generic_heap import Heap  # test starter file
+# from heaps_final.generic_heap import Heap  # test final answer file
+from generic_heap import Heap  # test starter file
 
 
 class HeapTests(unittest.TestCase):
