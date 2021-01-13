@@ -1,4 +1,4 @@
-class BinMaxHeap:
+class MaxHeap:
     def __init__(self):
         self.storage = [0]
         self.length = 0

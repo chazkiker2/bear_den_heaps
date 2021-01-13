@@ -1,4 +1,4 @@
-class BinMaxHeap:
+class MaxHeap:
     def __init__(self):
         self.storage = [0]
         self.length = 0
@@ -12,7 +12,7 @@ class BinMaxHeap:
     def get_max(self):
         return self.storage[1]
 
-    def del_max(self):
+    def delete_max(self):
         return_val = self.storage[1]
         self.storage[1] = self.storage[self.length]
         self.length -= 1
@@ -65,19 +65,18 @@ class BinMaxHeap:
             idx -= 1
 
 
-# Driver code to test BinMaxHeap
-# full feature test file will be written later
-bh = BinMaxHeap()
-bh.build_heap([9, 5, 6, 2, 3])
-print(bh.del_max())
-print(f"max={bh.get_max()}")
-bh.insert(8)
-bh.insert(8)
-print(f"max={bh.get_max()}")
-
-print(bh.del_max())
-print(f"max={bh.get_max()}")
-print(bh.del_max())
-print(f"max={bh.get_max()}")
-print(bh.del_max())
-print(bh.del_max())
+# Driver code to test MaxHeap
+# bh = MaxHeap()
+# bh.build_heap([9, 5, 6, 2, 3])
+# print(bh.delete_max())
+# print(f"max={bh.get_max()}")
+# bh.insert(8)
+# bh.insert(8)
+# print(f"max={bh.get_max()}")
+#
+# print(bh.delete_max())
+# print(f"max={bh.get_max()}")
+# print(bh.delete_max())
+# print(f"max={bh.get_max()}")
+# print(bh.delete_max())
+# print(bh.delete_max())
