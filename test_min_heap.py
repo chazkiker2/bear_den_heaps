@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
-from min_heap import MinHeap  # starter Heap
-# from heaps_final.min_heap import MinHeap  # solution Heap
+# from min_heap import MinHeap  # starter Heap
+from heaps_final.min_heap import MinHeap  # solution Heap
 
 
 class MyTestCase(unittest.TestCase):
@@ -85,6 +85,10 @@ class MyTestCase(unittest.TestCase):
         self.heap.insert(11)
         self.heap.delete_min()
         self.assertTrue(self.heap._sift_down.called)
+
+    def test_build_heap(self):
+        self.heap.build_heap([9, 5, 6, 2, 3])
+        self.assertEqual(self.heap.storage, [0, 2, 3, 6, 5, 9])
 
 
 if __name__ == '__main__':

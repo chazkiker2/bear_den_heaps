@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
-from max_heap import MaxHeap  # starter storage
-# from heaps_final.max_heap import MaxHeap  # solution storage
+# from max_heap import MaxHeap  # starter storage
+from heaps_final.max_heap import MaxHeap  # solution storage
 
 
 class MyTestCase(unittest.TestCase):
@@ -83,6 +83,10 @@ class MyTestCase(unittest.TestCase):
         self.heap.insert(11)
         self.heap.delete_max()
         self.assertTrue(self.heap._sift_down.called)
+
+    def test_build_heap(self):
+        self.heap.build_heap([2, 3, 5, 6, 9])
+        self.assertEqual(self.heap.storage, [0, 9, 6, 5, 2, 3])
 
 
 if __name__ == '__main__':
